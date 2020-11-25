@@ -1,26 +1,13 @@
 version: "3.7"
 
-volumes:
-  #volumeはホストにコピー or 表示させないもの
-  ##バイナリファイル（node_module）など、OS依存があるもの
-
-  #node_moduleを入れるvolume
-  vue-cli-node-volume:
-
+version: '3'
 services:
-  #コンテナ詳細
   app:
-    image: vuecli:1
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: vuecli3
+    build: .
     ports:
-      - "18082:8080"
+      - 9050:9050
     volumes:
-      - vue-cli-node-volume:/app/node_modules
-      - .:/app/
-
-    #-it
+      - .:/usr/src/app
     stdin_open: true
     tty: true
+    command: yarn serve
