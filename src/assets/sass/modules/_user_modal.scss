@@ -11,7 +11,7 @@
     transform: translate(-50%, -50%);
     max-width: 340px;
     height: calc(100% - 96px);
-    max-height: 500px;
+    max-height: 485px;
     width: 100%;
     padding: 35px 20px;
     text-align: center;
@@ -21,99 +21,147 @@
     @media (max-width: 650px){
       width: calc(100% - 35px);
     }
-
-    .top_al{
-      color: $gold;
-      i{
-        font-size: 40px;
-      }
-      h3{
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 11px;
-      }
-    }
-
-    .step_1{
-      margin-top: 130px;
-      font-size: 15px;
-      font-weight: 500;
-      p{ line-height: 26px; }
-    }
-
-    .step_2{
-      margin-top: 30px;
-
-      .fm{
-        text-align: left;
-        label{
-          font-size: 11px;
-          margin-bottom: 9px;
-          margin-top: 16px;
-        }
-        input[type=text],select{
-          border: 1px solid #bfbfbf;
-          border-radius: 8px;
-          padding: 11px 8px;
-          width: 100%;
-        }
-        select{
-          padding: 13px 8px;
-        }
-        .field{
-          display: flex;
-        }
-      }
-
-      .fm_name{
-        input:first-child{
-          margin-right: 8px;
-        }
-      }
-
-      .fm_bthday{
-
-        .year{width: 100px;}
-        .month{width: 50px}
-        .day{width: 50px}
-
-        .f_name{
-          position: relative;
-          bottom: -26px;
-          font-size: 11px;
-          padding: 0 5px;
-        }
-      }
-    }
-
-
-    .ft_actions{
-      position: absolute;
-      bottom: 36px;
-      left: 0;
-      right: 0;
-      .back{
-        font-size: 15px;
-        background-color: white;
-        border: 2px solid;
-        width: 120px;
-        padding: 11px 0;
-        border-radius: 30px;
-        color: $gold;
-        box-shadow: 0px 2px 7px #bfbfbf;
-        margin-right: 15px;
-      }
-
-      .next{
-        font-size: 15px;
-        background-color: $gold;
-        width: 120px;
-        padding: 11px 0;
-        border: 2px solid $gold;
-        border-radius: 30px;
-        color: white;
-      }
-    }
-
   }
+
+  .top_al{
+    color: $gold;
+    i{
+      font-size: 40px;
+    }
+    h3{
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 11px;
+    }
+  }
+
+
+  .step_1{
+    margin-top: 130px;
+    .txt{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+  }
+
+
+  .step_2{
+    margin-top: 22px;
+    .fm{
+      text-align: left;
+      label{
+        font-size: 11px;
+        margin-bottom: 9px;
+        margin-top: 16px;
+      }
+      input[type=text],select{
+        border: 1px solid #bfbfbf;
+        border-radius: 8px;
+        padding: 11px 8px;
+        width: 100%;
+      }
+      select{
+        padding: 13px 8px;
+      }
+      .field{
+        display: flex;
+      }
+    }
+
+    .fm_name{
+      input:first-child{
+        margin-right: 8px;
+      }
+    }
+
+    .fm_bthday{
+      .year{width: 100px;}
+      .month{width: 50px}
+      .day{width: 50px}
+
+      .f_name{
+        position: relative;
+        bottom: -26px;
+        font-size: 11px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+
+  .step_3{
+    margin-top: 62px;
+    .txt{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+    .mail{
+      margin-top: 36px;
+      border: 1px solid #bfbfbf;
+      border-radius: 8px;
+      padding: 11px 30px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+
+  .step_4{
+    margin-top: 34px;
+    .txt{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 29px;
+      .focus{
+        display: inline-block;
+        border-bottom: 1px solid;
+        font-weight: bold;
+      }
+    }
+    .mail{
+      margin: 43px 0;
+    }
+    .notice{
+      color: #eb4357;
+      font-size: 11px;
+    }
+  }
+
+  .body{
+    @include fade-in-left;
+  }
+
+  .ft_actions{
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    @include fade-in-left;
+    .back{
+      font-size: 16px;
+      background-color: white;
+      border: 2px solid;
+      width: 120px;
+      padding: 14px 0;
+      border-radius: 30px;
+      color: $gold;
+      box-shadow: 0px 2px 7px #bfbfbf;
+      margin-right: 15px;
+    }
+
+    .next{
+      font-size: 16px;
+      background-color: $gold;
+      width: 120px;
+      padding: 14px 0;
+      border: 2px solid $gold;
+      border-radius: 30px;
+      color: white;
+      box-shadow: 0px 2px 7px #bfbfbf;
+    }
+  }
+
 }
