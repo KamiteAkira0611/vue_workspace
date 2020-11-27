@@ -7,7 +7,7 @@ $ cd docker
 $ ./init
 ```
 
-#### 二日目以降
+#### 二回目以降
 
 ```
 $ cd docker
