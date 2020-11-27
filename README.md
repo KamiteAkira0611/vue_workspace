@@ -1,18 +1,32 @@
-# start
+## コンテナの立ち上げ
+
+#### 初回
 
 ```
-# 1回目
-$ docker-compose up --build app
-
-# 2回目移行
-$ docker-compose up -d
+$ cd docker
+$ ./init
 ```
 
-でコンテナを起動させた後、
+#### 二回目以降
 
 ```
-$ docker-compose exec app sh
-/usr/src/app # yarn serve
+$ cd docker
+$ ./start
+```
+
+## 起動
+
+```
+$ ./exec
+$ yarn serve
 ```
 
 http://localhost:9050/
+
+## コンテナの停止
+
+```
+$ cd docker
+$ ./stop
+```
+
