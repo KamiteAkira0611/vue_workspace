@@ -31,7 +31,7 @@
       <div class="fm fm_phone">
         <label>電話番号</label>
         <div class="field">
-          <input type="text" placeholder="ハイフンなしで11桁まで">
+          <input type="text" v-model="phone" placeholder="ハイフンなしで11桁まで">
         </div>
       </div>
     </div>
