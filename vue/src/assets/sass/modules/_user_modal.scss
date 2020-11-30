@@ -10,7 +10,7 @@
     transform: translate(-50%, -50%);
     max-width: 340px;
     height: calc(100% - 96px);
-    max-height: 485px;
+    max-height: 560px;
     width: 100%;
     padding: 35px 20px;
     text-align: center;
@@ -21,6 +21,16 @@
       width: calc(100% - 35px);
     }
   }
+
+  .step{
+    height: calc(100% - 155px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 355px;
+  }
+
+  height: calc(100% - 155px);
+  overflow: scroll;
 
   .top_al{
     color: $gold;
@@ -36,7 +46,8 @@
 
 
   .step_1{
-    margin-top: 130px;
+    display: flex;
+    align-items: center;
     .txt{
       font-size: 16px;
       font-weight: 500;
@@ -74,6 +85,28 @@
       }
     }
 
+    .fm_gender{
+      button{
+        width: 100%;
+        background-color: #eeeeee;
+        padding: 14px;
+        font-size: 15px;
+        transition: .3s;
+        &.on{
+          opacity: 0.51;
+          background-color: #000000;
+          color: white;
+        }
+      }
+      .women{
+        border-radius: 8px 0 0 8px;
+        margin-right: 1px;
+      }
+      .men{
+        border-radius: 0 8px 8px 0;
+      }
+    }
+
     .fm_bthday{
       .year{width: 100px;}
       .month{width: 50px}
@@ -90,14 +123,14 @@
 
 
   .step_3{
-    margin-top: 62px;
+    padding-top: 73px;
     .txt{
       font-size: 16px;
       font-weight: 500;
       line-height: 26px;
     }
     .mail{
-      margin-top: 36px;
+      margin-top: 45px;
       border: 1px solid #bfbfbf;
       border-radius: 8px;
       padding: 11px 30px;
@@ -109,9 +142,10 @@
 
 
   .step_4{
-    margin-top: 34px;
+    padding-top: 32px;
+    margin-top: 22px;
     .txt{
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
       line-height: 29px;
       .focus{

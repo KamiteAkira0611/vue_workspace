@@ -1,5 +1,5 @@
 <template>
-  <div class="step_3">
+  <div class="step step_3">
 
     <div class="body">
       <div class="txt">メールアドレスの承認を行います<br>ご登録のメールアドレスを確認し<br>OKを押してください</div>

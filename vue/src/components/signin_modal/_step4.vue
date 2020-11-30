@@ -1,5 +1,5 @@
 <template>
-  <div class="step_4">
+  <div class="step step_4">
 
     <div class="body">
       <div class="txt">
@@ -20,7 +20,6 @@
 
     <div class="ft_actions">
       <button class="back" @click="$emit('prev')">戻る</button>
-      <button class="next" @click="$emit('next')">OK</button>
     </div>
 
   </div>

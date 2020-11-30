@@ -1,5 +1,5 @@
 <template>
-  <div class="step_2">
+  <div class="step step_2">
 
     <div class="body">
       <div class="fm fm_name">
@@ -34,6 +34,14 @@
           <input type="text" v-model="phone" placeholder="ハイフンなしで11桁まで">
         </div>
       </div>
+
+      <div class="fm fm_gender">
+        <label>性別</label>
+        <div class="field">
+          <button class="women" :class="{on: gender == 1}" @click="gender = 1">女性</button>
+          <button class="men" :class="{on: gender == 2}" @click="gender = 2">男性</button>
+        </div>
+      </div>
     </div>
 
     <div class="ft_actions">
@@ -50,6 +58,7 @@ export default {
       year: Number,
       month: Number,
       day: Number,
+      gender: Number,
       first_name: "",
       last_name: "",
       phone: "",

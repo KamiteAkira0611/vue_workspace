@@ -44,7 +44,7 @@ import Step4 from './_step4.vue'
 export default {
   data() {
     return {
-      open: true,
+      open: false,
       step: 1,
     }
   },
