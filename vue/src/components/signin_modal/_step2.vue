@@ -14,7 +14,7 @@
         <label>生年月日</label>
         <div class="field">
           <select v-model="year" class="year">
-            <option v-for="n in 50" :value="n + 1980" :key="n">{{ n + 1980 }}</option>
+            <option v-for="n in 100" :value="2021 - n" :key="n">{{ 2021 - n }}</option>
           </select>
           <span class="f_name">年</span>
           <select v-model="month" class="month">

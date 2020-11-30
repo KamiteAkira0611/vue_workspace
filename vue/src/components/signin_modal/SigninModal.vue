@@ -10,25 +10,25 @@
 
 
       <step1
-        v-if="step == 1"
+        v-show="step == 1"
         @toggle="toggleOpen"
         @next="nextStep"
       ></step1>
 
       <step2
-        v-if="step == 2"
+        v-show="step == 2"
         @prev="prevStep"
         @next="nextStep"
       ></step2>
 
       <step3
-        v-if="step == 3"
+        v-show="step == 3"
         @next="nextStep"
         @prev="prevStep"
       ></step3>
 
       <step4
-        v-if="step == 4"
+        v-show="step == 4"
         @next="nextStep"
         @prev="prevStep"
       ></step4>
