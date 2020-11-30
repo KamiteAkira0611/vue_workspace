@@ -11,11 +11,13 @@
 
       <step1
         v-if="step == 1"
+        @toggle="toggleOpen"
         @next="nextStep"
       ></step1>
 
       <step2
         v-if="step == 2"
+        @prev="prevStep"
         @next="nextStep"
       ></step2>
 
@@ -62,6 +64,9 @@ export default {
     prevStep(){
       if(this.step <= 1) return
       this.step -= 1
+    },
+    toggleOpen(){
+      this.open = !this.open
     }
 
   },
