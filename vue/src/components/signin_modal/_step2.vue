@@ -1,5 +1,5 @@
 <template>
-  <div class="step step_2">
+  <div class="step step_2" :class="{action_none: loading}">
 
     <div class="body">
       <div class="fm fm_name">
@@ -14,15 +14,15 @@
         <label>生年月日</label>
         <div class="field">
           <select v-model="year" class="year">
-            <option v-for="n in 100" :value="2021 - n" :key="n">{{ 2021 - n }}</option>
+            <option v-for="n in 100" :value="String(2021 - n)" :key="n">{{ 2021 - n }}</option>
           </select>
           <span class="f_name">年</span>
           <select v-model="month" class="month">
-            <option v-for="n in 12" :value="n" :key="n">{{ n }}</option>
+            <option v-for="n in 12" :value="String(n)" :key="n">{{ n }}</option>
           </select>
           <span class="f_name">月</span>
-          <select v-model="day" class="day">
-            <option v-for="n in 31" :value="n" :key="n">{{ n }}</option>
+          <select v-model="date" class="day">
+            <option v-for="n in 31" :value="String(n)" :key="n">{{ n }}</option>
           </select>
           <span class="f_name">日</span>
         </div>
@@ -46,7 +46,10 @@
 
     <div class="ft_actions">
       <button class="back" @click="$emit('prev')">戻る</button>
-      <button class="next" @click="$emit('next')">OK</button>
+      <button class="next" @click="save_member">
+        <span v-show="!loading">OK</span>
+        <i class="fa fa-refresh fa-spin" v-show="loading" aria-hidden="true"></i>
+      </button>
     </div>
 
   </div>
@@ -56,13 +59,34 @@
 export default {
   data() {
     return {
-      year: Number,
-      month: Number,
-      day: Number,
+      year: "2000",
+      month: "1",
+      date: "1",
       gender: Number,
       first_name: "",
       last_name: "",
       phone: "",
+      loading: false
+    }
+  },
+  computed: {
+    birth_day(){
+      return this.year + "-" + this.month + "-" + this.date
+    }
+  },
+  methods: {
+    save_member(){
+      if (this.loading == true) return
+      this.loading = true
+
+      const params = {
+        sei_kana: this.last_name,
+        mei_kana: this.first_name,
+        gender: this.gender,
+        birth_day: this.birth_day,
+      }
+
+      console.log(params)
     }
   },
 }
