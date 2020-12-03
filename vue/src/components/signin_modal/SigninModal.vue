@@ -19,6 +19,7 @@
         v-show="step == 2"
         @prev="prevStep"
         @next="nextStep"
+        :token = "token"
       ></step2>
 
       <step3
@@ -44,6 +45,12 @@ import Step3 from './_step3.vue'
 import Step4 from './_step4.vue'
 
 export default {
+  props:{
+    token: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
       open: false,

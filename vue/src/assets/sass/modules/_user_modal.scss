@@ -86,6 +86,12 @@
     }
 
     .fm_gender{
+
+      .field{
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
       button{
         width: 100%;
         background-color: #eeeeee;
@@ -99,11 +105,7 @@
         }
       }
       .women{
-        border-radius: 8px 0 0 8px;
         margin-right: 1px;
-      }
-      .men{
-        border-radius: 0 8px 8px 0;
       }
     }
 

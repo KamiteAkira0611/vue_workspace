@@ -1,5 +1,5 @@
 <template>
-  <div class="step step_2" :class="{action_none: loading}">
+  <div class="step step_2">
 
     <div class="body">
       <div class="fm fm_name">
@@ -57,6 +57,12 @@
 
 <script>
 export default {
+  props: {
+    token: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
       year: "2000",
@@ -66,6 +72,7 @@ export default {
       first_name: "",
       last_name: "",
       phone: "",
+      errors: "",
       loading: false
     }
   },
@@ -80,6 +87,7 @@ export default {
       this.loading = true
 
       const params = {
+        token: this.token,
         sei_kana: this.last_name,
         mei_kana: this.first_name,
         gender: this.gender,
@@ -87,7 +95,22 @@ export default {
       }
 
       console.log(params)
+      this.$store.dispatch("member/addMemberInfo", params)
+    },
+
+    setSeed(){
+      this.last_name = "カミテ"
+      this.first_name = "アキラ"
+      this.gender = 2
+      this.year = "2001"
+      this.date = "11"
+      this.month = "6"
+      this.phone = "08038054648"
     }
+  },
+
+  mounted() {
+    this.setSeed()
   },
 }
 </script>

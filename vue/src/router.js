@@ -10,6 +10,10 @@ export default new Router({
   mode: 'history',
   routes: [
     { path: '/', component: loadView("HelloWorld") },
-    { path: '/signin_modal', component: loadView("signin_modal/SigninModal") }
+    {
+      path: '/signin_modal',
+      component: loadView("signin_modal/SigninModal"),
+      props: { token: "HLPaoiwbyDVc3d5xnsk2" }
+     }
   ]
 })
