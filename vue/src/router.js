@@ -14,6 +14,6 @@ export default new Router({
       path: '/signin_modal',
       component: loadView("signin_modal/SigninModal"),
       props: { token: "HLPaoiwbyDVc3d5xnsk2" }
-     }
+    }
   ]
 })

@@ -6,8 +6,8 @@
     </div>
 
     <div class="ft_actions">
-      <button class="back" @click="$emit('toggle')">戻る</button>
-      <button class="next" @click="$emit('next')">OK</button>
+      <button class="back_btn" @click="$emit('toggle')">戻る</button>
+      <button class="next_btn" @click="$emit('next')">OK</button>
     </div>
 
   </div>

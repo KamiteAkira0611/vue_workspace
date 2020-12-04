@@ -9,7 +9,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 340px;
-    height: calc(100% - 46px);
+    height: calc(100% - 35px);
+    overflow: scroll;
     max-height: 560px;
     width: 100%;
     padding: 35px 20px;
@@ -29,8 +30,6 @@
     max-height: 355px;
   }
 
-  height: calc(100% - 155px);
-  overflow: scroll;
 
   .top_al{
     color: $gold;
@@ -44,7 +43,41 @@
     }
   }
 
+  .ft_actions{
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    @include fade-in-left;
+    .back_btn{
+      font-size: 16px;
+      background-color: white;
+      border: 2px solid;
+      width: 120px;
+      height: 48px;
+      padding: 14px 0;
+      border-radius: 30px;
+      color: $gold;
+      box-shadow: 0px 2px 7px #bfbfbf;
+      margin-right: 15px;
+    }
 
+    .next_btn{
+      font-size: 16px;
+      background-color: $gold;
+      width: 120px;
+      height: 48px;
+      padding: 14px 0;
+      border: 2px solid $gold;
+      border-radius: 30px;
+      color: white;
+      box-shadow: 0px 2px 7px #bfbfbf;
+    }
+  }
+
+  /*-------------------------
+    ■ step1
+  ----------------------*/
   .step_1{
     display: flex;
     align-items: center;
@@ -55,7 +88,9 @@
     }
   }
 
-
+  /*-------------------------
+    ■ step2
+  ----------------------*/
   .step_2{
     margin-top: 15px;
     .fm{
@@ -76,6 +111,12 @@
       }
       .field{
         display: flex;
+      }
+      .error{
+        display: inline-block;
+        color: red;
+        font-size: 10px;
+        padding-left: 2px;
       }
     }
 
@@ -123,7 +164,9 @@
     }
   }
 
-
+  /*-------------------------
+    ■ step3
+  ----------------------*/
   .step_3{
     padding-top: 73px;
     .txt{
@@ -131,7 +174,8 @@
       font-weight: 500;
       line-height: 26px;
     }
-    .mail{
+    .email_field{
+      min-height: 40px;
       margin-top: 45px;
       border: 1px solid #bfbfbf;
       border-radius: 8px;
@@ -139,10 +183,18 @@
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-align: center;
+    }
+    .error{
+      color: red;
+      font-size: 12px;
+      padding-top: 8px;
     }
   }
 
-
+  /*-------------------------
+    ■ step4
+  ----------------------*/
   .step_4{
     padding-top: 32px;
     margin-top: 22px;
@@ -157,7 +209,9 @@
       }
     }
     .mail{
-      margin: 43px 0;
+      padding: 43px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .notice{
       color: #eb4357;
@@ -167,38 +221,6 @@
 
   .body{
     @include fade-in-left;
-  }
-
-  .ft_actions{
-    position: absolute;
-    bottom: 36px;
-    left: 0;
-    right: 0;
-    @include fade-in-left;
-    .back{
-      font-size: 16px;
-      background-color: white;
-      border: 2px solid;
-      width: 120px;
-      height: 48px;
-      padding: 14px 0;
-      border-radius: 30px;
-      color: $gold;
-      box-shadow: 0px 2px 7px #bfbfbf;
-      margin-right: 15px;
-    }
-
-    .next{
-      font-size: 16px;
-      background-color: $gold;
-      width: 120px;
-      height: 48px;
-      padding: 14px 0;
-      border: 2px solid $gold;
-      border-radius: 30px;
-      color: white;
-      box-shadow: 0px 2px 7px #bfbfbf;
-    }
   }
 
 }

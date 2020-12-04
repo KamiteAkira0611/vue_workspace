@@ -53,8 +53,8 @@ export default {
   },
   data() {
     return {
-      open: false,
-      step: 1,
+      open: true,
+      step: 2,
     }
   },
   components: {
